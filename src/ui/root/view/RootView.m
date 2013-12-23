@@ -51,7 +51,7 @@
 
 - (void) setupDefaults
 {
-    
+    self.backgroundColor = [UIColor darkGrayColor];
 }
 
 

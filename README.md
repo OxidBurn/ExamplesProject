@@ -1,4 +1,4 @@
 ExamplesProject
 ===============
 
-Project with examples of implementation controls
+Project with examples of implementation some controls

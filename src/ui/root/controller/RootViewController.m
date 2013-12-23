@@ -7,12 +7,15 @@
 //
 
 #import "RootViewController.h"
+#import "RootView.h"
 
 @interface RootViewController ()
 
 // properties
 
-
+/** Main view
+ */
+@property (nonatomic, strong) RootView* mainView;
 
 // methods
 
@@ -24,6 +27,10 @@
  */
 - (void) setupDefaults;
 
+/** initialize and setup main view
+ */
+- (void) setupMainView;
+
 @end
 
 @implementation RootViewController
@@ -32,7 +39,7 @@
 
 
 // private properties
-
+@synthesize mainView;
 
 
 #pragma mark - Initialization -
@@ -53,13 +60,13 @@
 - (void) viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self createUI];
 }
 
 - (void) loadView
 {
     [super loadView];
-    
-    [self createUI];
 }
 
 - (void) viewDidAppear: (BOOL) animated
@@ -90,7 +97,16 @@
 
 - (void) createUI
 {
+    // Setup main view
+    //
+    [self setupMainView];
+}
+
+- (void) setupMainView
+{
+    self.mainView = [[RootView alloc] initWithFrame: self.view.bounds];
     
+    [self.view addSubview: self.mainView];
 }
 
 
