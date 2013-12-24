@@ -23,6 +23,10 @@ static NSString* cellID = @"ExamplesCellID";
  */
 @property (nonatomic, strong) UITableView* examplesTable;
 
+/** Selected index
+ */
+@property (nonatomic, assign) NSUInteger selectedIndex;
+
 // methods
 
 /** Create UI
@@ -47,6 +51,7 @@ static NSString* cellID = @"ExamplesCellID";
 // private properties
 @synthesize listContent;
 @synthesize examplesTable;
+@synthesize selectedIndex;
 
 
 #pragma mark - Initialization -
@@ -68,6 +73,8 @@ static NSString* cellID = @"ExamplesCellID";
 
 - (void) setupDefaults
 {
+    self.selectedIndex = 0;
+    
     // Create UI
     //
     [self createUI];
@@ -85,11 +92,16 @@ static NSString* cellID = @"ExamplesCellID";
 
 - (void) setupExamplesTable
 {
-    self.examplesTable = [[UITableView alloc] initWithFrame: self.bounds
+    // multiply content amount, plus 30 pixel for expanded cell
+    //
+    CGFloat tableHeight = (self.listContent.count * 50) + 30;
+    
+    self.examplesTable = [[UITableView alloc] initWithFrame: CGRectMake(0, 0, self.width, tableHeight)
                                                       style: UITableViewStylePlain];
     
-    self.examplesTable.dataSource = self;
-    self.examplesTable.delegate   = self;
+    self.examplesTable.dataSource       = self;
+    self.examplesTable.delegate         = self;
+    self.examplesTable.autoresizingMask = AutoLayoutBySize;
     
     [self addSubview: self.examplesTable];
 }
@@ -111,7 +123,9 @@ static NSString* cellID = @"ExamplesCellID";
 - (CGFloat)    tableView: (UITableView*) tableView
  heightForRowAtIndexPath: (NSIndexPath*) indexPath
 {
-    return 50;
+    // If cell is selected return height 80, else 50
+    //
+    return (indexPath.row == self.selectedIndex) ? 80 : 50;
 }
 
 - (UITableViewCell*) tableView: (UITableView*) tableView
@@ -140,7 +154,39 @@ static NSString* cellID = @"ExamplesCellID";
 - (void)       tableView: (UITableView*) tableView
  didSelectRowAtIndexPath: (NSIndexPath*) indexPath
 {
+    //The user is selecting the cell which is currently expanded
+    //we want to minimize it back
+    //
+    if(self.selectedIndex == indexPath.row)
+    {
+        selectedIndex = -1;
+        
+        [tableView reloadRowsAtIndexPaths: [NSArray arrayWithObject: indexPath]
+                         withRowAnimation: UITableViewRowAnimationFade];
+        
+        return;
+    }
     
+    //First we check if a cell is already expanded.
+    //If it is we want to minimize make sure it is reloaded to minimize it back
+    //
+    if(self.selectedIndex != NSNotFound)
+    {
+        NSIndexPath* previousPath = [NSIndexPath indexPathForRow: self.selectedIndex
+                                                       inSection: 0];
+        
+        self.selectedIndex = indexPath.row;
+        
+        [tableView reloadRowsAtIndexPaths: [NSArray arrayWithObject: previousPath]
+                         withRowAnimation: UITableViewRowAnimationFade];
+    }
+    
+    //Finally set the selected index to the new selection and reload it to expand
+    //
+    self.selectedIndex = indexPath.row;
+    
+    [tableView reloadRowsAtIndexPaths: [NSArray arrayWithObject: indexPath]
+                     withRowAnimation: UITableViewRowAnimationFade];
 }
 
 

@@ -10,4 +10,15 @@
 
 @interface ExamplesCell : BaseTableViewCell
 
+// properties
+
+
+// methods
+
+/**
+ *  Expanded cell
+ */
+- (void) createUI;
+
+
 @end

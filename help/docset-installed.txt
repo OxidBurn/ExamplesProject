@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/oxidburn/Library/Developer/Shared/Documentation/DocSets/com.onsight.ExamplesProject.docset
+Time: 2013-12-24 11:25:48 +0000
