@@ -90,6 +90,12 @@
 #define COCOAPODS_VERSION_MINOR_BlocksKit_UIKit 0
 #define COCOAPODS_VERSION_PATCH_BlocksKit_UIKit 0
 
+// PSTCollectionView
+#define COCOAPODS_POD_AVAILABLE_PSTCollectionView
+#define COCOAPODS_VERSION_MAJOR_PSTCollectionView 1
+#define COCOAPODS_VERSION_MINOR_PSTCollectionView 2
+#define COCOAPODS_VERSION_PATCH_PSTCollectionView 0
+
 // Reachability
 #define COCOAPODS_POD_AVAILABLE_Reachability
 #define COCOAPODS_VERSION_MAJOR_Reachability 3

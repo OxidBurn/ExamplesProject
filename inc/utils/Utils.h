@@ -84,4 +84,49 @@ static inline void CustomLog(const char* file, int lineNumber, const char* funct
  */
 + (void) showAlertWithText: (NSString*) text;
 
+/** Checking can make device calls
+ */
++ (BOOL) canMakePhoneCalls;
+
+/** Get first responder
+ */
++ (void) findAndResignFirstReponder;
+
++ (BOOL) findAndResignFirstResponderFromView: (UIView*) view;
+
+/** Benchmark
+ */
++ (void) benchmark: (void(^)(void))block
+              name: (NSString*) name;
+
++ (void) benchmark:(void(^)(void))block;
+
+/** Print all fonts
+ */
++ (void) printFont;
+
+/** Detect is retina screen
+ */
++ (BOOL) isRetina;
+
+/** Get support directory path
+ */
++ (NSString*) applicationSupportDirectory;
+
+/** Detect os version
+ */
++ (NSUInteger) detectOSVersion;
+
+/** Helvetica neue light font with size
+ */
++ (UIFont*) lightFont: (NSUInteger) fontSize;
+
+/** Helvetica neue bold font with size
+ */
++ (UIFont*) boldFont: (NSUInteger) fontSize;
+
+/** Helvetica neue regular font with size
+ */
++ (UIFont*) regularFont: (NSUInteger) fontSize;
+
 @end

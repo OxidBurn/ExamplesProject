@@ -8,97 +8,91 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>Pods-AFNetworking.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>Pods-BlocksKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
+		</dict>
+		<key>Pods-PSTCollectionView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Reachability.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
 		</dict>
 		<key>Pods-SVProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>7</integer>
 		</dict>
 		<key>Pods-TestFlightSDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>8</integer>
 		</dict>
 		<key>Pods-libffi.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>02F647579D9943FB8E57FA71</key>
+		<key>3D5F5A785F724D88B2081778</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2AEC88A9DF354558ADFF8211</key>
+		<key>49041D28FC3A44AD9F18E4FA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>377CD99F8848408892C0E77F</key>
+		<key>52E21ABA47DD4247B7D59097</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>678F345DC71348C1AB447411</key>
+		<key>62EB0BD9AAB84D19B38A798B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7C09CB15D558439E92CB9C71</key>
+		<key>8AFE3BC1535641BFB1F8C7F2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AE0EA065FBEB4AF3B9810B6D</key>
+		<key>DE7864E44C27404197D88387</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B5CB88371E004481B1EFF79A</key>
+		<key>E2C7F01069E24AA0841F5B72</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C3C429FB7ED6459EA776D683</key>
+		<key>ED45A3DFB28F4660BC52E786</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F31222334B65493B8B3A216F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

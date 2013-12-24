@@ -91,17 +91,14 @@ static NSString* cellID = @"ExamplesCellID";
 }
 
 - (void) setupExamplesTable
-{
-    // multiply content amount, plus 30 pixel for expanded cell
-    //
-    CGFloat tableHeight = (self.listContent.count * 50) + 30;
-    
-    self.examplesTable = [[UITableView alloc] initWithFrame: CGRectMake(0, 0, self.width, tableHeight)
+{    
+    self.examplesTable = [[UITableView alloc] initWithFrame: self.bounds
                                                       style: UITableViewStylePlain];
     
-    self.examplesTable.dataSource       = self;
-    self.examplesTable.delegate         = self;
-    self.examplesTable.autoresizingMask = AutoLayoutBySize;
+    self.examplesTable.dataSource          = self;
+    self.examplesTable.delegate            = self;
+    self.examplesTable.autoresizingMask    = AutoLayoutAll;
+    self.examplesTable.autoresizesSubviews = YES;
     
     [self addSubview: self.examplesTable];
 }
@@ -137,13 +134,10 @@ static NSString* cellID = @"ExamplesCellID";
     {
         cell = [[ExamplesCell alloc] initWithStyle: UITableViewCellStyleSubtitle
                                    reuseIdentifier: cellID];
-        
-        cell.textLabel.textColor       = [UIColor colorWithRed: 0.20f green: 0.20f blue: 0.20f alpha: 1.00f];
-        cell.detailTextLabel.textColor = [UIColor colorWithRed: 0.29f green: 0.29f blue: 0.29f alpha: 1.00f];
     }
     
-    cell.textLabel.text       = self.listContent[indexPath.row][@"title"];
-    cell.detailTextLabel.text = self.listContent[indexPath.row][@"Description"];
+    [cell fillContent: self.listContent[indexPath.row][@"title"]
+         withDescText: self.listContent[indexPath.row][@"Description"]];
     
     return cell;
 }

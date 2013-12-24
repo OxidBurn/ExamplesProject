@@ -135,6 +135,8 @@
     self.examplesView = [[ExamplesView alloc] initWithFrame: self.view.bounds
                                             withListContent: self.listContent];
     
+    self.examplesView.autoresizingMask = AutoLayoutBySize;
+    
     [self.view addSubview: self.examplesView];
 }
 

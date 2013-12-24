@@ -113,8 +113,6 @@
     // Setup main view
     //
     [self setupMainView];
-    
-    
 }
 
 - (void) setupMainView
@@ -126,15 +124,13 @@
 
 - (void) setupExamplesViewController
 {
-    NSString* pathToExamplesListContent = [[NSBundle mainBundle] pathForResource: @"ExamplesList" ofType: @"plist"];
-    
-    self.examplesController = [[ExamplesViewController alloc] initWithPlistPath: pathToExamplesListContent];
+    self.examplesController = [[ExamplesViewController alloc] initWithPlistPath: [Constants pathToExamplesList]];
     
     BaseNavigationController* exampleNavController = [[BaseNavigationController alloc] initWithRootViewController: self.examplesController];
     
-    [self presentViewController: exampleNavController
-                       animated: NO
-                     completion: nil];
+    [self.navigationController presentViewController: exampleNavController
+                                            animated: NO
+                                          completion: nil];
 }
 
 

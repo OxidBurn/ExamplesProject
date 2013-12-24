@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Chaban Nickolay. All rights reserved.
 //
 
+#import "UIView+Utilities.h"
+
 @interface BaseTableViewCell : UITableViewCell
 
 // properties

@@ -20,5 +20,10 @@
  */
 - (void) createUI;
 
+/** Fill content
+ */
+- (void) fillContent: (NSString*) titleText
+        withDescText: (NSString*) descText;
+
 
 @end
