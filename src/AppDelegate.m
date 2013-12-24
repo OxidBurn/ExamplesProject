@@ -9,6 +9,15 @@
 #import "AppDelegate.h"
 #import "BaseNavigationController.h"
 #import "RootViewController.h"
+#import <TestFlightSDK/TestFlight.h>
+
+void uncaughtExceptionHandler (NSException* exception);
+
+void uncaughtExceptionHandler (NSException* exception)
+{
+    NSLog(@"%@", [NSString stringWithFormat: @"Unhandled Exception:\n%@", exception]);
+    NSLog(@"%@", [NSString stringWithFormat: @"Stack Trace:\n%@", [exception callStackSymbols]]);
+}
 
 @interface AppDelegate()
 
@@ -111,7 +120,11 @@
  */
 - (void) setupDefaults
 {
-    
+#ifdef __DEBUG__
+    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+#else
+    [TestFlight takeOff: @""]; // need add token
+#endif
 }
 
 @end

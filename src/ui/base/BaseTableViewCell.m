@@ -50,9 +50,9 @@
             animated: (BOOL) animated
 {
     if (!selected)
-        self.backgroundView.backgroundColor = [UIColor colorWithRed: 0.12f green: 0.12f blue: 0.12f alpha: 1.00f];
+        self.backgroundView.backgroundColor = [UIColor colorWithWhite: 0.867 alpha: 1.000];
     else
-        self.backgroundView.backgroundColor = [UIColor colorWithRed: 0.14f green: 0.14f blue: 0.14f alpha: 1.00f];
+        self.backgroundView.backgroundColor = [UIColor colorWithWhite: 0.502 alpha: 1.000];
     
     [super setSelected: selected
               animated: animated];

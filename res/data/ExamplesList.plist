@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Open files</key>
+	<string>Example for opening files with different file types. Several files inside app and user can add from iTunes.</string>
+	<key>Loading and preview files</key>
+	<string>Example of loading files from internet and previewing</string>
+	<key>Video player</key>
+	<string>Video player with custom interface</string>
+</dict>
+</plist>

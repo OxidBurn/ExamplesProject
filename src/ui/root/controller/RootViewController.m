@@ -8,6 +8,8 @@
 
 #import "RootViewController.h"
 #import "RootView.h"
+#import "ExamplesViewController.h"
+#import "BaseNavigationController.h"
 
 @interface RootViewController ()
 
@@ -16,6 +18,10 @@
 /** Main view
  */
 @property (nonatomic, strong) RootView* mainView;
+
+/** Examples view controller
+ */
+@property (nonatomic, strong) ExamplesViewController* examplesController;
 
 // methods
 
@@ -31,6 +37,10 @@
  */
 - (void) setupMainView;
 
+/** Init and setup examples view controller
+ */
+- (void) setupExamplesViewController;
+
 @end
 
 @implementation RootViewController
@@ -40,6 +50,7 @@
 
 // private properties
 @synthesize mainView;
+@synthesize examplesController;
 
 
 #pragma mark - Initialization -
@@ -61,7 +72,9 @@
 {
     [super viewDidLoad];
     
-    [self createUI];
+    // Setup examples controller
+    //
+    [self setupExamplesViewController];
 }
 
 - (void) loadView
@@ -100,6 +113,8 @@
     // Setup main view
     //
     [self setupMainView];
+    
+    
 }
 
 - (void) setupMainView
@@ -107,6 +122,19 @@
     self.mainView = [[RootView alloc] initWithFrame: self.view.bounds];
     
     [self.view addSubview: self.mainView];
+}
+
+- (void) setupExamplesViewController
+{
+    NSString* pathToExamplesListContent = [[NSBundle mainBundle] pathForResource: @"ExamplesList" ofType: @"plist"];
+    
+    self.examplesController = [[ExamplesViewController alloc] initWithPlistPath: pathToExamplesListContent];
+    
+    BaseNavigationController* exampleNavController = [[BaseNavigationController alloc] initWithRootViewController: self.examplesController];
+    
+    [self presentViewController: exampleNavController
+                       animated: NO
+                     completion: nil];
 }
 
 

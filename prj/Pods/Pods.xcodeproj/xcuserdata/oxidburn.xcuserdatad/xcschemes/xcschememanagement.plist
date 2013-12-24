@@ -4,7 +4,37 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-AFDownloadRequestOperation.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-BlocksKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Reachability.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-TestFlightSDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-libffi.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>C3AB88C35CFE4232926F34E6</key>
+		<key>02F647579D9943FB8E57FA71</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EDF0C1FC033246A9AD04C516</key>
+		<key>2AEC88A9DF354558ADFF8211</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>377CD99F8848408892C0E77F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>678F345DC71348C1AB447411</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7C09CB15D558439E92CB9C71</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AE0EA065FBEB4AF3B9810B6D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B5CB88371E004481B1EFF79A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C3C429FB7ED6459EA776D683</key>
 		<dict>
 			<key>primary</key>
 			<true/>
